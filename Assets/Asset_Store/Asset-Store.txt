@@ -1,0 +1,1 @@
+Dossier contenant les ressources récupérées depuis l'Asset Store d'Unity
