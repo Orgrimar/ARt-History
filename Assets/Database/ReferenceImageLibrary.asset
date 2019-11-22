@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5509162019795892422
+  m_GuidHigh: 5277337812108931505
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4664315428648290752
+      m_GuidHigh: 17202983501572491913
+    m_SerializedTextureGuid:
+      m_GuidLow: 6315302711795471683
+      m_GuidHigh: 5298844166434380120
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: 80065531_o
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5527627696436180816
+      m_GuidHigh: 14602602330663635095
+    m_SerializedTextureGuid:
+      m_GuidLow: 2361278713154623869
+      m_GuidHigh: 15071640477156142409
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: a6372900ec3ac3adb187e396ca1ea7b9
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5367243124952866947
+      m_GuidHigh: 12281997602524310458
+    m_SerializedTextureGuid:
+      m_GuidLow: 2451120942510398334
+      m_GuidHigh: 727162472805520968
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Madchen_Mit_Perle_-_Jan_Vermeer_van_Delft
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5660758803639947245
+      m_GuidHigh: 4299868770020000405
+    m_SerializedTextureGuid:
+      m_GuidLow: 5256947878846209734
+      m_GuidHigh: 15963131817169890458
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: guernica-picasso
+    m_Texture: {fileID: 0}
