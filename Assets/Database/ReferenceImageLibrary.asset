@@ -23,7 +23,7 @@ MonoBehaviour:
       m_GuidHigh: 5298844166434380120
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: 80065531_o
+    m_Name: 1
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5527627696436180816
@@ -33,7 +33,7 @@ MonoBehaviour:
       m_GuidHigh: 15071640477156142409
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: a6372900ec3ac3adb187e396ca1ea7b9
+    m_Name: 2
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5367243124952866947
@@ -43,7 +43,7 @@ MonoBehaviour:
       m_GuidHigh: 727162472805520968
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Madchen_Mit_Perle_-_Jan_Vermeer_van_Delft
+    m_Name: 3
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5660758803639947245
@@ -53,5 +53,5 @@ MonoBehaviour:
       m_GuidHigh: 15963131817169890458
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: guernica-picasso
+    m_Name: 4
     m_Texture: {fileID: 0}
