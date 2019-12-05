@@ -7,15 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 [RequireComponent(typeof(ARRaycastManager))]
 public class PlaceItem : MonoBehaviour
 {
-    [SerializeField]
-    [Tooltip("Prefab de l'objet à projeter.")]
-    private GameObject itemPrefab;
-
-    public GameObject ItemPrefab
-    {
-        get { return itemPrefab; }
-        set { itemPrefab = value; }
-    }
+    [SerializeField] private List<GameObject> Tableaux = new List<GameObject>();
 
     public GameObject spawnItem { get; private set; }
 
@@ -37,7 +29,7 @@ public class PlaceItem : MonoBehaviour
             var hitPlace = hit[0].pose;
 
             if (spawnItem == null)
-                spawnItem = Instantiate( itemPrefab, hitPlace.position, hitPlace.rotation);
+                spawnItem = Instantiate( Tableaux[1], hitPlace.position, hitPlace.rotation);
             else
                 spawnItem.transform.position = hitPlace.position;
         }

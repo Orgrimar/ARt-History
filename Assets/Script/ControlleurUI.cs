@@ -18,6 +18,11 @@ public class ControlleurUI : MonoBehaviour
     [SerializeField] private Button JeuneFille_btn;
     [SerializeField] private Button NuitEtoile_btn;
 
+    [SerializeField] private GameObject _guernica;
+    [SerializeField] private GameObject _percistance;
+    [SerializeField] private GameObject _jeuneFille;
+    [SerializeField] private GameObject _nuitEtoilee;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +42,10 @@ public class ControlleurUI : MonoBehaviour
         placeItem.enabled = false;
 
         LibrairieMenu.gameObject.SetActive(false);
+        _guernica.gameObject.SetActive(false);
+        _percistance.gameObject.SetActive(false);
+        _jeuneFille.gameObject.SetActive(false);
+        _nuitEtoilee.gameObject.SetActive(false);
 
         // Change mode
         Scan_toggle_btn.onClick.AddListener(() => BuildMode(planeManager, raycastManager, placeItem));
@@ -84,15 +93,31 @@ public class ControlleurUI : MonoBehaviour
         {
             case 1:
                 LibrairieMenu.gameObject.SetActive(false);
+                _guernica.gameObject.SetActive(false);
+                _percistance.gameObject.SetActive(true);
+                _jeuneFille.gameObject.SetActive(false);
+                _nuitEtoilee.gameObject.SetActive(false);
                 break;
             case 2:
                 LibrairieMenu.gameObject.SetActive(false);
+                _guernica.gameObject.SetActive(false);
+                _percistance.gameObject.SetActive(false);
+                _jeuneFille.gameObject.SetActive(false);
+                _nuitEtoilee.gameObject.SetActive(true);
                 break;
             case 3:
                 LibrairieMenu.gameObject.SetActive(false);
+                _guernica.gameObject.SetActive(false);
+                _percistance.gameObject.SetActive(false);
+                _jeuneFille.gameObject.SetActive(true);
+                _nuitEtoilee.gameObject.SetActive(false);
                 break;
             case 4:
                 LibrairieMenu.gameObject.SetActive(false);
+                _guernica.gameObject.SetActive(true);
+                _percistance.gameObject.SetActive(false);
+                _jeuneFille.gameObject.SetActive(false);
+                _nuitEtoilee.gameObject.SetActive(false);
                 break;
         }
     }

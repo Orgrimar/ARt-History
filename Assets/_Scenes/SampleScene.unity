@@ -524,6 +524,14 @@ MonoBehaviour:
   Percistance_btn: {fileID: 854905464}
   JeuneFille_btn: {fileID: 633987596}
   NuitEtoile_btn: {fileID: 165585585}
+  _guernica: {fileID: 6989333643520332182, guid: 8b7e24669cad4154cb36d6e2026a2bd1,
+    type: 3}
+  _percistance: {fileID: 6166349784206707217, guid: e7d147085b6d81241856526036346450,
+    type: 3}
+  _jeuneFille: {fileID: 7904257135001273546, guid: aed0f42b74feeff47995cc75e79b4984,
+    type: 3}
+  _nuitEtoilee: {fileID: 6469313164848057760, guid: 8a8093f6d4392b048a7c442048872741,
+    type: 3}
 --- !u!4 &316135510
 Transform:
   m_ObjectHideFlags: 0
@@ -1337,8 +1345,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d72fa6f4777c9e4fa660022d2c34ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 3538987069959741228, guid: ec3b4990a531dc04ba506334a75dfa87,
-    type: 3}
+  Tableaux:
+  - {fileID: 6166349784206707217, guid: e7d147085b6d81241856526036346450, type: 3}
+  - {fileID: 6469313164848057760, guid: 8a8093f6d4392b048a7c442048872741, type: 3}
+  - {fileID: 7904257135001273546, guid: aed0f42b74feeff47995cc75e79b4984, type: 3}
+  - {fileID: 6989333643520332182, guid: 8b7e24669cad4154cb36d6e2026a2bd1, type: 3}
 --- !u!1 &866345232
 GameObject:
   m_ObjectHideFlags: 0
