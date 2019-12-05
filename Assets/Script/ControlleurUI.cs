@@ -8,7 +8,6 @@ public class ControlleurUI : MonoBehaviour
     [SerializeField] private Button Build_toggle_btn;
     [SerializeField] private Button Scan_toggle_btn;
     [SerializeField] private Button Library_btn;
-    [SerializeField] private Button Scan_btn;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +16,6 @@ public class ControlleurUI : MonoBehaviour
 
         Build_toggle_btn.gameObject.SetActive(false);
         Library_btn.gameObject.SetActive(false);
-        Scan_btn.gameObject.SetActive(true);
         Scan_toggle_btn.gameObject.SetActive(true);
 
         // Change mode
@@ -29,7 +27,6 @@ public class ControlleurUI : MonoBehaviour
     void BuildMode()
     {
         Scan_toggle_btn.gameObject.SetActive(false);
-        Scan_btn.gameObject.SetActive(false);
         Build_toggle_btn.gameObject.SetActive(true);
         Library_btn.gameObject.SetActive(true);
 
@@ -38,7 +35,6 @@ public class ControlleurUI : MonoBehaviour
     void ScanMode()
     {
         Scan_toggle_btn.gameObject.SetActive(true);
-        Scan_btn.gameObject.SetActive(true);
         Build_toggle_btn.gameObject.SetActive(false);
         Library_btn.gameObject.SetActive(false);
     }
