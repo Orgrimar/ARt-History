@@ -322,6 +322,7 @@ MonoBehaviour:
   Build_toggle_btn: {fileID: 1052694719}
   Scan_toggle_btn: {fileID: 1484115487}
   Library_btn: {fileID: 769441854}
+  AR_Session_Origin: {fileID: 860773226}
 --- !u!4 &316135510
 Transform:
   m_ObjectHideFlags: 0
@@ -802,7 +803,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860773226}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
@@ -817,7 +818,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860773226}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d72fa6f4777c9e4fa660022d2c34ad8, type: 3}
   m_Name: 
