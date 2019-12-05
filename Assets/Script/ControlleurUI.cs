@@ -11,6 +11,13 @@ public class ControlleurUI : MonoBehaviour
     [SerializeField] private Button Library_btn;
     [SerializeField] private GameObject AR_Session_Origin;
 
+
+    [SerializeField] private GameObject LibrairieMenu;
+    [SerializeField] private Button Guernica_btn;
+    [SerializeField] private Button Percistance_btn;
+    [SerializeField] private Button JeuneFille_btn;
+    [SerializeField] private Button NuitEtoile_btn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +36,8 @@ public class ControlleurUI : MonoBehaviour
         raycastManager.enabled = false;
         placeItem.enabled = false;
 
+        LibrairieMenu.gameObject.SetActive(false);
+
         // Change mode
         Scan_toggle_btn.onClick.AddListener(() => BuildMode(planeManager, raycastManager, placeItem));
         Build_toggle_btn.onClick.AddListener(() => ScanMode(planeManager, raycastManager, placeItem));
@@ -44,6 +53,8 @@ public class ControlleurUI : MonoBehaviour
         raycastManager.enabled = true;
         placeItem.enabled = true;
 
+        Library_btn.onClick.AddListener(() => LibrairiePanel());
+
     }
 
     private void ScanMode(ARPlaneManager planeManager, ARRaycastManager raycastManager, PlaceItem placeItem)
@@ -57,11 +68,32 @@ public class ControlleurUI : MonoBehaviour
         placeItem.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LibrairiePanel()
     {
+        LibrairieMenu.gameObject.SetActive(true);
 
+        Guernica_btn.onClick.AddListener(() => Picture(4));
+        Percistance_btn.onClick.AddListener(() => Picture(1));
+        JeuneFille_btn.onClick.AddListener(() => Picture(3));
+        NuitEtoile_btn.onClick.AddListener(() => Picture(2));
     }
 
-
+    private void Picture(int id)
+    {
+        switch (id)
+        {
+            case 1:
+                LibrairieMenu.gameObject.SetActive(false);
+                break;
+            case 2:
+                LibrairieMenu.gameObject.SetActive(false);
+                break;
+            case 3:
+                LibrairieMenu.gameObject.SetActive(false);
+                break;
+            case 4:
+                LibrairieMenu.gameObject.SetActive(false);
+                break;
+        }
+    }
 }
