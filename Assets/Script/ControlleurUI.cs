@@ -11,12 +11,11 @@ public class ControlleurUI : MonoBehaviour
     [SerializeField] private Button Library_btn;
     [SerializeField] private GameObject AR_Session_Origin;
 
-
     [SerializeField] private GameObject LibrairieMenu;
-    [SerializeField] private Button Guernica_btn;
-    [SerializeField] private Button Percistance_btn;
-    [SerializeField] private Button JeuneFille_btn;
-    [SerializeField] private Button NuitEtoile_btn;
+    [SerializeField] private Button Scale_btn;
+    [SerializeField] private Slider ScaleSlider;
+    [SerializeField] private Button Rotate_btn;
+    [SerializeField] private Button Validate_btn;
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +31,14 @@ public class ControlleurUI : MonoBehaviour
 
         Build_toggle_btn.gameObject.SetActive(false);
         Library_btn.gameObject.SetActive(false);
+        Scale_btn.gameObject.SetActive(false);
+        ScaleSlider.gameObject.SetActive(false);
+        Rotate_btn.gameObject.SetActive(false);
+        Validate_btn.gameObject.SetActive(false);
         planeManager.enabled = false;
         raycastManager.enabled = false;
         placeItem.enabled = false;
+
         LibrairieMenu.gameObject.SetActive(false);
 
         // Change mode
@@ -48,12 +52,11 @@ public class ControlleurUI : MonoBehaviour
 
         Build_toggle_btn.gameObject.SetActive(true);
         Library_btn.gameObject.SetActive(true);
+        Scale_btn.gameObject.SetActive(true);
+        Rotate_btn.gameObject.SetActive(true);
         planeManager.enabled = true;
         raycastManager.enabled = true;
         placeItem.enabled = true;
-
-        Library_btn.onClick.AddListener(() => LibrairiePanel());
-
     }
 
     private void ScanMode(ARPlaneManager planeManager, ARRaycastManager raycastManager, PlaceItem placeItem)
@@ -62,38 +65,11 @@ public class ControlleurUI : MonoBehaviour
 
         Build_toggle_btn.gameObject.SetActive(false);
         Library_btn.gameObject.SetActive(false);
+        Scale_btn.gameObject.SetActive(false);
+        Rotate_btn.gameObject.SetActive(false);
         planeManager.enabled = false;
         raycastManager.enabled = false;
         placeItem.enabled = false;
         LibrairieMenu.gameObject.SetActive(false);
-    }
-
-    private void LibrairiePanel()
-    {
-        LibrairieMenu.gameObject.SetActive(true);
-
-        Guernica_btn.onClick.AddListener(() => Picture(4));
-        Percistance_btn.onClick.AddListener(() => Picture(1));
-        JeuneFille_btn.onClick.AddListener(() => Picture(3));
-        NuitEtoile_btn.onClick.AddListener(() => Picture(2));
-    }
-
-    private void Picture(int id)
-    {
-        switch (id)
-        {
-            case 1:
-                LibrairieMenu.gameObject.SetActive(false);
-                break;
-            case 2:
-                LibrairieMenu.gameObject.SetActive(false);
-                break;
-            case 3:
-                LibrairieMenu.gameObject.SetActive(false);
-                break;
-            case 4:
-                LibrairieMenu.gameObject.SetActive(false);
-                break;
-        }
     }
 }
