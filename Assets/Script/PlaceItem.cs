@@ -9,6 +9,7 @@ using UnityEngine.XR.ARSubsystems;
 public class PlaceItem : MonoBehaviour
 {
     [SerializeField] private Text screen;
+    [SerializeField] private Text erreur;
     /*[SerializeField] private GameObject _percistance;
     public GameObject _Percistance
     {
@@ -43,6 +44,7 @@ public class PlaceItem : MonoBehaviour
     private void Start()
     {
         screen.gameObject.SetActive(false);
+        erreur.gameObject.SetActive(false);
     }
 
     private void Awake()
@@ -82,7 +84,15 @@ public class PlaceItem : MonoBehaviour
             screen.gameObject.SetActive(true);
 
             if (spawnItem == null)
-                spawnItem = Instantiate(_guernica, hitPlace.position, hitPlace.rotation);
+                try
+                {
+                    spawnItem = Instantiate(_guernica, hitPlace.position, hitPlace.rotation);
+                }
+                catch
+                {
+                    screen.gameObject.SetActive(true);
+                }
+                
             else
                 spawnItem.transform.position = hitPlace.position;
         }
