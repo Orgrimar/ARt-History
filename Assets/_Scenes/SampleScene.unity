@@ -217,6 +217,7 @@ RectTransform:
   - {fileID: 1953935197}
   - {fileID: 395519507}
   - {fileID: 1114040583}
+  - {fileID: 1793567608}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -524,14 +525,6 @@ MonoBehaviour:
   Percistance_btn: {fileID: 854905464}
   JeuneFille_btn: {fileID: 633987596}
   NuitEtoile_btn: {fileID: 165585585}
-  _guernica: {fileID: 6989333643520332182, guid: 8b7e24669cad4154cb36d6e2026a2bd1,
-    type: 3}
-  _percistance: {fileID: 6166349784206707217, guid: e7d147085b6d81241856526036346450,
-    type: 3}
-  _jeuneFille: {fileID: 7904257135001273546, guid: aed0f42b74feeff47995cc75e79b4984,
-    type: 3}
-  _nuitEtoilee: {fileID: 6469313164848057760, guid: 8a8093f6d4392b048a7c442048872741,
-    type: 3}
 --- !u!4 &316135510
 Transform:
   m_ObjectHideFlags: 0
@@ -1330,9 +1323,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 3119110269208381993, guid: 00e51ad2f8028674cb8d9027f4eb7f62,
+  m_PlanePrefab: {fileID: 6101295762484221988, guid: 00e51ad2f8028674cb8d9027f4eb7f62,
     type: 3}
-  m_DetectionMode: 2
+  m_DetectionMode: -1
 --- !u!114 &860773231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1345,11 +1338,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d72fa6f4777c9e4fa660022d2c34ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tableaux:
-  - {fileID: 6166349784206707217, guid: e7d147085b6d81241856526036346450, type: 3}
-  - {fileID: 6469313164848057760, guid: 8a8093f6d4392b048a7c442048872741, type: 3}
-  - {fileID: 7904257135001273546, guid: aed0f42b74feeff47995cc75e79b4984, type: 3}
-  - {fileID: 6989333643520332182, guid: 8b7e24669cad4154cb36d6e2026a2bd1, type: 3}
+  screen: {fileID: 1793567609}
+  _guernica: {fileID: 6989333643520332182, guid: 8b7e24669cad4154cb36d6e2026a2bd1,
+    type: 3}
 --- !u!1 &866345232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,6 +2061,83 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793089056}
+  m_CullTransparentMesh: 0
+--- !u!1 &1793567607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1793567608}
+  - component: {fileID: 1793567610}
+  - component: {fileID: 1793567609}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1793567608
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793567607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 40919618}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000022888, y: 810}
+  m_SizeDelta: {x: 280.05, y: 87.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1793567609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793567607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Ecran touch\xE9"
+--- !u!222 &1793567610
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793567607}
   m_CullTransparentMesh: 0
 --- !u!1 &1953935196
 GameObject:
