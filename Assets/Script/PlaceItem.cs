@@ -100,28 +100,28 @@ public class PlaceItem : MonoBehaviour
             switch (Id)
             {
                 case 1:
+                    if (spawnItem != null)
+                        Destroy(spawnItem);
                     if (spawnItem == null)
                         spawnItem = Instantiate(_percistance, hitPlace.position, hitPlace.rotation);
-                    else
-                        spawnItem.transform.position = hitPlace.position;
                     break;
                 case 2:
+                    if (spawnItem != null)
+                        Destroy(spawnItem);
                     if (spawnItem == null)
                         spawnItem = Instantiate(_nuit, hitPlace.position, hitPlace.rotation);
-                    else
-                        spawnItem.transform.position = hitPlace.position;
                     break;
                 case 3:
+                    if (spawnItem != null)
+                        Destroy(spawnItem);
                     if (spawnItem == null)
                         spawnItem = Instantiate(_fille, hitPlace.position, hitPlace.rotation);
-                    else
-                        spawnItem.transform.position = hitPlace.position;
                     break;
                 case 4:
+                    if (spawnItem != null)
+                        Destroy(spawnItem);
                     if (spawnItem == null)
                         spawnItem = Instantiate(_guernica, hitPlace.position, hitPlace.rotation);
-                    else
-                        spawnItem.transform.position = hitPlace.position;
                     break;
             }
         }
@@ -147,7 +147,7 @@ public class PlaceItem : MonoBehaviour
         LibrairieMenu.gameObject.SetActive(false);
     }
 
-    private void ScaleItem()
+    public void ScaleItem()
     {
         test.gameObject.SetActive(true);
         ScaleSlider.gameObject.SetActive(true);
@@ -167,5 +167,10 @@ public class PlaceItem : MonoBehaviour
     {
         ScaleSlider.gameObject.SetActive(false);
         Validate_btn.gameObject.SetActive(false);
+    }
+
+    private void ChangeScale(float _value)
+    {
+        value = _value;
     }
 }
