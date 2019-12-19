@@ -153,8 +153,6 @@ public class PlaceItem : MonoBehaviour
         ScaleSlider.gameObject.SetActive(true);
         Validate_btn.gameObject.SetActive(true);
 
-        spawnItem.transform.localScale = new Vector3(value, value, value);
-
         Validate_btn.onClick.AddListener(() => OnValidate());
     }
 
