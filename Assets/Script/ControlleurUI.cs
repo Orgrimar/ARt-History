@@ -10,12 +10,15 @@ public class ControlleurUI : MonoBehaviour
     [SerializeField] private Button Scan_toggle_btn;
     [SerializeField] private Button Library_btn;
     [SerializeField] private GameObject AR_Session_Origin;
+    [SerializeField] private Text ValidateManager;
 
     [SerializeField] private GameObject LibrairieMenu;
     [SerializeField] private Button Scale_btn;
     [SerializeField] private Slider ScaleSlider;
     [SerializeField] private Button Rotate_btn;
     [SerializeField] private Button Validate_btn;
+
+    [SerializeField] private ARTrackedImageManager imageManager;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,7 @@ public class ControlleurUI : MonoBehaviour
 
         // Default scan mode
         Scan_toggle_btn.gameObject.SetActive(true);
+        imageManager.enabled = true;
 
         Build_toggle_btn.gameObject.SetActive(false);
         Library_btn.gameObject.SetActive(false);
@@ -42,13 +46,14 @@ public class ControlleurUI : MonoBehaviour
         LibrairieMenu.gameObject.SetActive(false);
 
         // Change mode
-        Scan_toggle_btn.onClick.AddListener(() => BuildMode(planeManager, raycastManager, placeItem));
-        Build_toggle_btn.onClick.AddListener(() => ScanMode(planeManager, raycastManager, placeItem));
+        Scan_toggle_btn.onClick.AddListener(() => BuildMode(planeManager, raycastManager, placeItem, imageManager));
+        Build_toggle_btn.onClick.AddListener(() => ScanMode(planeManager, raycastManager, placeItem, imageManager));
     }
 
-    private void BuildMode(ARPlaneManager planeManager, ARRaycastManager raycastManager, PlaceItem placeItem)
+    private void BuildMode(ARPlaneManager planeManager, ARRaycastManager raycastManager, PlaceItem placeItem, ARTrackedImageManager imageManager)
     {
         Scan_toggle_btn.gameObject.SetActive(false);
+        imageManager.enabled = false;
 
         Build_toggle_btn.gameObject.SetActive(true);
         Library_btn.gameObject.SetActive(true);
@@ -59,9 +64,10 @@ public class ControlleurUI : MonoBehaviour
         placeItem.enabled = true;
     }
 
-    private void ScanMode(ARPlaneManager planeManager, ARRaycastManager raycastManager, PlaceItem placeItem)
+    private void ScanMode(ARPlaneManager planeManager, ARRaycastManager raycastManager, PlaceItem placeItem, ARTrackedImageManager imageManager)
     {
         Scan_toggle_btn.gameObject.SetActive(true);
+        imageManager.enabled = true;
 
         Build_toggle_btn.gameObject.SetActive(false);
         Library_btn.gameObject.SetActive(false);
@@ -71,5 +77,17 @@ public class ControlleurUI : MonoBehaviour
         raycastManager.enabled = false;
         placeItem.enabled = false;
         LibrairieMenu.gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (imageManager.enabled == true)
+        {
+            ValidateManager.enabled = true;
+        }
+        else
+        {
+            ValidateManager.enabled = false;
+        }
     }
 }

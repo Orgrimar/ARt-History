@@ -23,7 +23,7 @@ MonoBehaviour:
       m_GuidHigh: 5298844166434380120
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: 1
+    m_Name: La persistance et la memoire
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5527627696436180816
@@ -33,7 +33,7 @@ MonoBehaviour:
       m_GuidHigh: 15071640477156142409
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: 2
+    m_Name: La nuit etoilee
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5367243124952866947
@@ -41,10 +41,10 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 2451120942510398334
       m_GuidHigh: 727162472805520968
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
-    m_Name: 3
-    m_Texture: {fileID: 0}
+    m_Size: {x: 0.254, y: 0.381}
+    m_SpecifySize: 1
+    m_Name: "La jeune fille \xE0 la perle"
+    m_Texture: {fileID: 2800000, guid: b7da5b7e21822204485691956a66170a, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5660758803639947245
       m_GuidHigh: 4299868770020000405
@@ -53,5 +53,5 @@ MonoBehaviour:
       m_GuidHigh: 15963131817169890458
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: 4
+    m_Name: Guernica
     m_Texture: {fileID: 0}
